@@ -21,7 +21,11 @@ int main(){
   head(); //calls header function.
 
   string students_MR[numStudents] =
-    {"Anna", "Ben", "Emma", "Jack", "Lily", "Max", "Nora", "Sam", "Kate", "Leo"}
+    {"Anna", "Ben", "Emma", "Jack", "Lily", "Max", "Nora", "Sam", "Kate", "Leo"};
+
+   int scores_MR[numStudents][numTests] ={};
+
+   int averages_MR[numStudents];
 
 
 return 0;
