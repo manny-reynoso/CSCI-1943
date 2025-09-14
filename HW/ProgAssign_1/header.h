@@ -3,18 +3,22 @@
 
 #include <string>
 
+// Compile-time sizes used for arrays and function params
+const int numStudents = 10;
+const int numTests    = 5;
 
-constexpr int numStudents = 10;
-constexpr int numTests = 5;
+// Prints the assignment header block
+void head();
 
+// Reads the data file and fills the 2D scores array
+// Expected line format:  Name: s1 s2 s3 s4 s5
+void getdata_MR(const std::string& filename,
+                int scores[][numTests],
+                int nrows, int ncols);
 
-// Function prototypes
+// (Teammates will add these to the header later)
+// void calcdata_MR(const int scores[][numTests], int averages[], int nrows, int ncols);
+// void printdata_MR(const std::string students[], const int scores[][numTests],
+//                   const int averages[], int nrows, int ncols);
 
-void head(); // Print professor, student, and assignment info
-
-void getdata_MR (); //Gets data from text file, stores to scores_MR
-
-void calcdata_MR (); // Averages data from scores_MR and numTests, stores  to averages_MR
-
-void printdata_MR(); // Prints numStudents, scores_Mr and averages_MR into a table
-#endif
+#endif // HEADER_H
